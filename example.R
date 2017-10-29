@@ -5,11 +5,7 @@ library(tidyverse)
 ui <- fluidPage(
   checkboxGroupInput("checkGroup", label = h3("Checkbox group"), 
                      choices = list("month 1" = 1, "month 2" = 2, "month 3" = 3, "month 4" = 4)),
-  radioButtons("radio", label = h3("Radio buttons"),
-               choices = list("Choice 1" = 1, "Choice 2" = 2, "Choice 3" = 3,"Choice 4" = 4), 
-               selected = 1),
   plotOutput("hist"),
-  plotOutput("tempOne")
 )
 
 server <- function(input, output) {
